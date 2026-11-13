@@ -1,0 +1,6 @@
+*.csv
+data/*
+output/*
+.env
+!data/.gitkeep
+!output/.gitkeep
