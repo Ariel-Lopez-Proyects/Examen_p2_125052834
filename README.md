@@ -79,7 +79,6 @@ docker compose exec api /scripts/probar_ssh.sh
 ```
 
 ![ssh localhost](evidencias/02_ssh_localhost.png)
-![ssh api a hadoop](evidencias/03_ssh_api_hadoop.png)
 
 ### C1. Job de MapReduce con Hadoop Streaming
 
@@ -97,8 +96,6 @@ El mapper ignora el encabezado y descarta las líneas mal formadas (con un núme
 time python3 mapreduce/secuencial.py data/ventas_125052834.csv > output/secuencial.txt
 diff output/secuencial.txt output/resultado/part-00000 && echo COINCIDEN
 ```
-
-![comparativa](evidencias/05_comparativa.png)
 
 ### D. Base de datos y API
 
@@ -131,7 +128,8 @@ curl localhost:5000/resultados
 
 Los datos siguen disponibles porque Postgres guarda su información en el volumen nombrado `pgdata`, que `docker compose down` no elimina.
 
-![persistencia](evidencias/07_persistencia.png)
+![persistencia](evidencias/07_dockerAbajo.png)
+![persistencia](evidencias/08_persistencia.png)
 
 ## Comparativa de rendimiento
 
